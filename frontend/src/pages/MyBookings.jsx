@@ -44,7 +44,7 @@ const MyBookings = () => {
       <div className="section-header" style={{ marginBottom: '2rem' }}>
         <div>
           <h1 className="section-title">My Reservation History</h1>
-          <p className="section-desc">Track and manage your upcoming rentals, payment invoices, and past trips with Faizan Rentals.</p>
+          <p className="section-desc">Track and manage your upcoming rentals, payment invoices, and past trips with Royal Rentals.</p>
         </div>
       </div>
 

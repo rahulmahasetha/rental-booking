@@ -21,19 +21,19 @@ const runSeed = async () => {
     const customerPassword = await bcrypt.hash('customer123', salt);
 
     await User.create({
-      name: 'Faizan Admin',
-      email: 'admin@faizanrentals.com',
+      name: 'Royal Rental Admin',
+      email: 'admin@royalrental.com',
       password: adminPassword,
       role: 'Admin'
     });
 
     await User.create({
       name: 'Rahul Customer',
-      email: 'customer@faizanrentals.com',
+      email: 'customer@royalrental.com',
       password: customerPassword,
       role: 'Customer'
     });
-    console.log('[Seed CLI] Demo users created: admin@faizanrentals.com & customer@faizanrentals.com');
+    console.log('[Seed CLI] Demo users created: admin@royalrental.com & customer@royalrental.com');
 
     await Vehicle.insertMany(vehiclesData);
     console.log(`[Seed CLI] Successfully inserted ${vehiclesData.length} vehicles (Cars & Bikes in ₹ INR).`);

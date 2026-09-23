@@ -77,7 +77,7 @@ const BrowseVehicles = () => {
     <div>
       <div className="section-header" style={{ marginBottom: '1.5rem' }}>
         <div>
-          <h1 className="section-title">Faizan Car & Bike Fleet Catalog</h1>
+          <h1 className="section-title">Royal Rental Car & Bike Fleet Catalog</h1>
           <p className="section-desc">Browse our complete lineup of premium cars, luxury SUVs, and thrilling motorbikes available across town.</p>
         </div>
         <div style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
@@ -156,7 +156,7 @@ const BrowseVehicles = () => {
       {/* Catalog Grid Display */}
       {loading ? (
         <div style={{ textAlign: 'center', padding: '5rem 0', color: 'var(--text-secondary)' }}>
-          <p style={{ fontSize: '1.2rem' }}>Loading Faizan vehicle inventory...</p>
+          <p style={{ fontSize: '1.2rem' }}>Loading Royal Rental vehicle inventory...</p>
         </div>
       ) : filteredAndSortedVehicles.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '5rem', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-lg)', border: '1px dashed var(--border-color)' }}>

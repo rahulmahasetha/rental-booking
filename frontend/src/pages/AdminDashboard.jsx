@@ -2,16 +2,16 @@ import React, { useState, useEffect, useMemo } from 'react';
 import api from '../services/api';
 import VehicleCard from '../components/VehicleCard';
 import { useAuth } from '../context/AuthContext';
-import { 
-  Plus, Check, X, Car, Calendar, Users, DollarSign, 
-  RefreshCw, ShieldAlert, KeyRound, Lock, TrendingUp, Sparkles, Bike 
+import {
+  Plus, Check, X, Car, Calendar, Users, DollarSign,
+  RefreshCw, ShieldAlert, KeyRound, Lock, TrendingUp, Sparkles, Bike
 } from 'lucide-react';
 
 const AdminDashboard = () => {
   const { user, isAdmin, login } = useAuth();
 
   // Admin login credentials if visiting /admin while not logged in as Admin
-  const [adminEmail, setAdminEmail] = useState('admin@faizanrentals.com');
+  const [adminEmail, setAdminEmail] = useState('admin@royalrental.com');
   const [adminPassword, setAdminPassword] = useState('');
   const [authLoading, setAuthLoading] = useState(false);
   const [authError, setAuthError] = useState(null);
@@ -98,7 +98,7 @@ const AdminDashboard = () => {
 
   // Delete vehicle from inventory
   const handleDeleteVehicle = async (id) => {
-    if (window.confirm('Are you certain you wish to delete this car/bike from Faizan Rentals inventory?')) {
+    if (window.confirm('Are you certain you wish to delete this car/bike from Royal Rentals inventory?')) {
       try {
         await api.delete(`/vehicles/${id}`);
         setVehicles(vehicles.filter((v) => v._id !== id));
@@ -139,7 +139,7 @@ const AdminDashboard = () => {
         const res = await api.post('/vehicles', formData);
         if (res.data.success) {
           setVehicles([res.data.data, ...vehicles]);
-          alert('🎉 Brand new vehicle added to Faizan fleet catalog!');
+          alert('🎉 Brand new vehicle added to Royal Rentals fleet catalog!');
         }
       }
       setShowVehicleModal(false);
@@ -211,7 +211,7 @@ const AdminDashboard = () => {
             <div style={{ width: '56px', height: '56px', background: '#eff6ff', borderRadius: '50%', color: '#2563eb', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 0.75rem auto', boxShadow: '0 4px 6px -1px rgba(37,99,235,0.1)' }}>
               <Lock size={28} />
             </div>
-            <h2 className="auth-title">Faizan Admin Console</h2>
+            <h2 className="auth-title">Royal Rental Admin Console</h2>
             <p className="auth-subtitle">Restricted Administrative Gateway. Please authenticate to access fleet inventory, pricing controls, and user CRM.</p>
           </div>
 
@@ -230,7 +230,7 @@ const AdminDashboard = () => {
                 className="form-control"
                 value={adminEmail}
                 onChange={(e) => setAdminEmail(e.target.value)}
-                placeholder="admin@faizanrentals.com"
+                placeholder="admin@royalrental.com"
                 required
               />
             </div>
@@ -272,7 +272,7 @@ const AdminDashboard = () => {
             </span>
             <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Admin ID: {user?._id?.slice(-6)?.toUpperCase()}</span>
           </div>
-          <h1 className="section-title">Faizan Rentals Admin Control Panel</h1>
+          <h1 className="section-title">Royal Rentals Admin Control Panel</h1>
           <p className="section-desc">Manage your car & bike inventory, set live ₹ INR rental prices, examine customer profiles, and process orders.</p>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem' }}>
@@ -406,10 +406,10 @@ const AdminDashboard = () => {
                       </td>
                       <td style={{ color: 'var(--text-secondary)' }}>{u.email}</td>
                       <td>
-                        <span style={{ 
-                          padding: '4px 10px', 
-                          borderRadius: '12px', 
-                          fontSize: '0.8rem', 
+                        <span style={{
+                          padding: '4px 10px',
+                          borderRadius: '12px',
+                          fontSize: '0.8rem',
                           fontWeight: 700,
                           backgroundColor: u.role === 'Admin' ? '#fef3c7' : '#eff6ff',
                           color: u.role === 'Admin' ? '#b45309' : '#1d4ed8',
@@ -571,7 +571,7 @@ const AdminDashboard = () => {
         <div className="modal-overlay" onClick={() => setShowVehicleModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '660px' }}>
             <div className="modal-header">
-              <h3>{editingVehicle ? 'Edit Vehicle Specifications' : 'Add New Bike / Car to Faizan Fleet'}</h3>
+              <h3>{editingVehicle ? 'Edit Vehicle Specifications' : 'Add New Bike / Car to Royal Rental Fleet'}</h3>
               <button onClick={() => setShowVehicleModal(false)} className="modal-close-btn">
                 <X size={20} />
               </button>

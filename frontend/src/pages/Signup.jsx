@@ -39,7 +39,7 @@ const Signup = () => {
     <div className="auth-container">
       <div className="auth-card">
         <h2 className="auth-title">Customer Registration</h2>
-        <p className="auth-subtitle">Register your account to explore Faizan Rentals' verified motorcycle & automobile collection.</p>
+        <p className="auth-subtitle">Register your account to explore Royal Rentals' verified motorcycle & automobile collection.</p>
 
         {err && (
           <div style={{ backgroundColor: 'var(--danger-bg)', color: 'var(--danger-color)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-md)', fontSize: '0.9rem', marginBottom: '1.25rem', border: '1px solid #fecaca' }}>

@@ -101,7 +101,7 @@ const BookingModal = ({ vehicle, onClose, onSuccess }) => {
         <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ textAlign: 'center', padding: '2.5rem' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Login Required</h3>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-            Please log in or create an account to reserve the <strong>{vehicle.name}</strong> at Faizan Rentals.
+            Please log in or create an account to reserve the <strong>{vehicle.name}</strong> at Royal Rentals.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
             <button onClick={onClose} className="btn btn-secondary">Cancel</button>

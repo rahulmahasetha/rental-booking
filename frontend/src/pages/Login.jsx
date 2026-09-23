@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div className="auth-container">
       <div className="auth-card">
-        <h2 className="auth-title">Welcome to Faizan Rentals</h2>
+        <h2 className="auth-title">Welcome to Royal Rentals</h2>
         <p className="auth-subtitle">Log in to reserve premium bikes & cars or access your dashboard.</p>
 
         {err && (

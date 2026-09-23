@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="logo-icon">
             <Car size={22} />
           </div>
-          <span>Faizan Rentals</span>
+          <span>Royal Rentals</span>
         </Link>
 
         <ul className="nav-links">

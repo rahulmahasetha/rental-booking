@@ -152,14 +152,14 @@ const seedIfEmpty = async () => {
       
       await User.create([
         {
-          name: 'Faizan Admin',
-          email: 'admin@faizanrentals.com',
+          name: 'Royal Rental Admin',
+          email: 'admin@royalrental.com',
           password: adminPassword,
           role: 'Admin'
         },
         {
           name: 'Rahul Customer',
-          email: 'customer@faizanrentals.com',
+          email: 'customer@royalrental.com',
           password: customerPassword,
           role: 'Customer'
         }

@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="logo-icon" style={{ width: '28px', height: '28px', background: '#2563eb', borderRadius: '6px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Car size={16} />
           </div>
-          <span>Faizan Rentals</span>
+          <span>Royal Rentals</span>
         </div>
 
         <div style={{ display: 'flex', gap: '2.5rem', color: '#475569', fontSize: '0.88rem' }}>
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-text">
-          &copy; {new Date().getFullYear()} Faizan Car & Bike Rental System. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Royal Rental Car & Bike Rental System. All Rights Reserved.
         </div>
       </div>
     </footer>

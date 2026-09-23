@@ -57,7 +57,7 @@ const Home = () => {
             <p className="hero-subtitle" style={{ fontSize: '1.12rem', lineHeight: 1.6, marginBottom: '2.2rem' }}>
               From legendary Royal Enfield & KTM motorbikes to executive BMW sedans and adventure Mahindra Thars. Reserve your dream ride in seconds with guaranteed lowest <strong>₹ INR</strong> rates and zero hidden fees.
             </p>
-            
+
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link to="/browse" className="btn btn-primary btn-lg" style={{ padding: '0.85rem 1.8rem', fontSize: '1.02rem' }}>
                 Explore Cars & Bikes <ArrowRight size={19} style={{ marginLeft: '6px' }} />
@@ -109,9 +109,9 @@ const Home = () => {
             </div>
 
             {/* Main Showcase Composite Image */}
-            <img 
-              src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=85" 
-              alt="Luxury Automobile & Bike Showcase" 
+            <img
+              src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=85"
+              alt="Luxury Automobile & Bike Showcase"
               className="hero-car-img"
               style={{ maxHeight: '420px', objectFit: 'cover', width: '100%', borderRadius: '24px', border: '4px solid white', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15)' }}
             />
@@ -148,7 +148,7 @@ const Home = () => {
 
         {loading ? (
           <div style={{ textAlign: 'center', padding: '5rem 0', color: 'var(--text-secondary)' }}>
-            <p style={{ fontSize: '1.2rem' }}>Loading premium vehicles from Faizan database...</p>
+            <p style={{ fontSize: '1.2rem' }}>Loading premium vehicles from database...</p>
           </div>
         ) : filteredVehicles.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '4rem 0', backgroundColor: 'var(--bg-secondary)', borderRadius: 'var(--radius-lg)' }}>
@@ -157,9 +157,9 @@ const Home = () => {
         ) : (
           <div className="vehicles-grid">
             {filteredVehicles.map((car) => (
-              <VehicleCard 
-                key={car._id} 
-                vehicle={car} 
+              <VehicleCard
+                key={car._id}
+                vehicle={car}
                 onBookClick={(v) => setActiveBookingVehicle(v)}
               />
             ))}
@@ -182,8 +182,8 @@ const Home = () => {
 
       {/* Booking Checkout Modal */}
       {activeBookingVehicle && (
-        <BookingModal 
-          vehicle={activeBookingVehicle} 
+        <BookingModal
+          vehicle={activeBookingVehicle}
           onClose={() => setActiveBookingVehicle(null)}
           onSuccess={handleBookingSuccess}
         />
